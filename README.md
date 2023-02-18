@@ -1,16 +1,17 @@
-# pdf_viewer
+# Pdf Viewer (Built in Flutter)
 
-A new Flutter project.
+Pdf viewer to view the pdf files you need to use for your work or anything you need.
 
-## Getting Started
+## How to Setup
 
-This project is a starting point for a Flutter application.
+The Steps are too much simple:-
 
-A few resources to get you started if this is your first Flutter project:
+- Download or clone the repository
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Go to pubspec.yaml file
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Get the packages from the yaml file
+
+- Run the app & Enjoy!
+
+
