@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:pdf_viewer/screen/view_pdf.dart';
+import 'package:pdf_viewer/screens/view_pdf.dart';
+import 'package:pdf_viewer/utils/colors.dart';
+import 'package:pdf_viewer/widgets/custom_text.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -14,15 +16,20 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   List<File> files = [];
   FilePickerResult? result;
+
   PlatformFile? file;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: whiteColor,
       appBar: AppBar(
-        title: const Text("Free PDF Viewer"),
+        title: CustomText(
+          text: "Free PDF Viewer",
+          color: whiteColor,
+        ),
         centerTitle: true,
-        backgroundColor: const Color(0xff24b04b),
-        elevation: 0,
+        backgroundColor: primaryColor,
+        elevation: 3,
       ),
       body: SafeArea(
         child: Center(
@@ -37,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
                   backgroundColor: const Color(0xff24b04b),
                   minimumSize: const Size(
                     double.infinity,
-                    80,
+                    70,
                   ),
                 ),
                 onPressed: () async {
@@ -54,12 +61,13 @@ class _MainScreenState extends State<MainScreen> {
                       },
                     ),
                   );
-                  print(result);
+
                   setState(() {});
                 },
-                label: const Text(
-                  "Choose PDF",
-                  style: TextStyle(fontSize: 20.0),
+                label: CustomText(
+                  text: "Choose PDF",
+                  color: whiteColor,
+                  fontSize: 20.0,
                 )),
           ),
         ),

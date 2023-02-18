@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdf_viewer/screen/main_screen.dart';
+import 'package:pdf_viewer/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var files;
     return MaterialApp(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        title: 'FREE PDF VIEWER',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MainScreen());
+        home: const SplashScreen());
   }
 }

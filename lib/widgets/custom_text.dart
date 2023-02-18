@@ -47,7 +47,7 @@ class _CustomTextState extends State<CustomText> {
         letterSpacing: widget.letterSpacing,
         fontSize: widget.fontSize,
         fontWeight: widget.fontWeight ?? FontWeight.normal,
-        color: widget.color ?? Colors.black,
+        color: widget.color ?? Colors.white,
         decoration: widget.decoration,
         shadows: widget.shadows,
         decorationColor: widget.decorationColor,

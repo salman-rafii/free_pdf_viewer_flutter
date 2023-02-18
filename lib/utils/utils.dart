@@ -20,3 +20,9 @@ Future<List<File>> pickFiles() async {
   }
   return filesList;
 }
+
+Widget progressIndicator() {
+  return const Center(
+    child: CircularProgressIndicator(),
+  );
+}
