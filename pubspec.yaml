@@ -38,6 +38,7 @@ dependencies:
   pdf_viewer_plugin: ^2.0.1
   file_picker: ^5.2.5
   google_fonts: ^4.0.3
+  google_mobile_ads: ^2.3.0
 
 dev_dependencies:
   flutter_test:
