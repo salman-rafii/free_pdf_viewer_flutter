@@ -10,6 +10,7 @@ class PdfApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: primaryColor,
         leading: IconButton(
             onPressed: () {
@@ -17,7 +18,7 @@ class PdfApp extends StatelessWidget {
             },
             icon: const Icon(Icons.arrow_back_ios)),
         title: const Text(
-          "PDF",
+          "PDF VIEWER",
         ),
       ),
       body: PdfView(gestureNavigationEnabled: true, path: path),

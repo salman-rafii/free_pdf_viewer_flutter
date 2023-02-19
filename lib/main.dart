@@ -11,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'FREE PDF VIEWER',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const SplashScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'FREE PDF VIEWER',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const SplashScreen(),
+    );
   }
 }

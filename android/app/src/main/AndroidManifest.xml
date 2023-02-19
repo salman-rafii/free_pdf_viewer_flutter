@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pdf_viewer">
    <application
-        android:label="pdf_viewer"
+        android:label="Free Pdf Viewer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
