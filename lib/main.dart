@@ -3,8 +3,10 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pdf_viewer/screens/splash_screen.dart';
 
 void main() {
+  // flutter bindings
   WidgetsFlutterBinding.ensureInitialized();
   // initialize ads
+
   MobileAds.instance.initialize();
   runApp(const MyApp());
 }
