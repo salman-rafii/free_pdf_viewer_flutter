@@ -4,6 +4,7 @@ import 'package:pdf_viewer/screens/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  // initialize ads
   MobileAds.instance.initialize();
   runApp(const MyApp());
 }
