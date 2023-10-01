@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:pdf_viewer/utils/colors.dart';
+import 'package:free_pdf_viewer/screens/utils/colors.dart';
 import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 
 class PdfApp extends StatefulWidget {
@@ -14,6 +14,7 @@ class PdfApp extends StatefulWidget {
 class _PdfAppState extends State<PdfApp> {
   late BannerAd _bannerAd;
   bool isAdLoaded = false;
+  var adUnit = "ca-app-pub-8022664802279637/5455175842";
 
   @override
   void initState() {
@@ -24,12 +25,17 @@ class _PdfAppState extends State<PdfApp> {
   _initBannerAd() {
     _bannerAd = BannerAd(
       size: AdSize.banner,
-      adUnitId: 'BannerAd',
+      adUnitId: adUnit,
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          isAdLoaded = true;
+          setState(() {
+            isAdLoaded = true;
+          });
         },
-        onAdFailedToLoad: (ad, error) {},
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          print(error);
+        },
       ),
       request: AdRequest(),
     );
@@ -41,7 +47,7 @@ class _PdfAppState extends State<PdfApp> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: primaryColor,
+        backgroundColor: AppColors.primaryColor,
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
@@ -53,9 +59,10 @@ class _PdfAppState extends State<PdfApp> {
       ),
       body: PdfView(gestureNavigationEnabled: true, path: widget.path),
       bottomNavigationBar: isAdLoaded
-          ? Container(
+          ? SizedBox(
               height: _bannerAd.size.height.toDouble(),
               width: _bannerAd.size.width.toDouble(),
+              child: AdWidget(ad: _bannerAd),
             )
           : SizedBox(),
     );

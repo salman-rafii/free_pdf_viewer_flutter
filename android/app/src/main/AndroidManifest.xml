@@ -1,9 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pdf_viewer">
+   
    <application
         android:label="Free Pdf Viewer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+          <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+       
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,5 +33,11 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+               <meta-data
+           android:name="com.google.android.gms.ads.APPLICATION_ID"
+           android:value="ca-app-pub-8022664802279637~5719749788"/>
     </application>
+<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
 </manifest>

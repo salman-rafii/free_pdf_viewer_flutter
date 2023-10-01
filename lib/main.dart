@@ -1,13 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:pdf_viewer/screens/splash_screen.dart';
+import 'package:free_pdf_viewer/screens/modules/splash/splash_screen.dart';
 
-void main() {
+void main() async {
   // flutter bindings
   WidgetsFlutterBinding.ensureInitialized();
-  // initialize ads
-
-  MobileAds.instance.initialize();
+  await Firebase.initializeApp();
+  await MobileAds.instance.initialize();
   runApp(const MyApp());
 }
 

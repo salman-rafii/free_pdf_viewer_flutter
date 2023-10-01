@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:pdf_viewer/screens/main_screen.dart';
-import 'package:pdf_viewer/utils/colors.dart';
-import 'package:pdf_viewer/widgets/custom_text.dart';
+import 'package:free_pdf_viewer/screens/modules/auth/starting_page.dart';
+import 'package:free_pdf_viewer/screens/modules/home/main_screen.dart';
+import 'package:free_pdf_viewer/screens/utils/colors.dart';
+import 'package:free_pdf_viewer/screens/widgets/text/custom_text.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,13 +20,13 @@ class SplashScreenState extends State<SplashScreen> {
     Timer(
         const Duration(seconds: 5),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const MainScreen())));
+            MaterialPageRoute(builder: (context) => const StartingAuthPage())));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryColor,
+      backgroundColor: AppColors.primaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
